@@ -4,7 +4,9 @@ import hexlet.code.schemas.StringSchema;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ValidatorTest {
     private Validator validator;
@@ -55,7 +57,7 @@ public class ValidatorTest {
 
     @Test
     void testMultipleMinLengthCalls() {
-        StringSchema schema= validator.string();
+        StringSchema schema = validator.string();
         assertTrue(schema.minLength(10).minLength(4).isValid("Hexlet"));
     }
 

@@ -10,11 +10,11 @@ public class StringSchema {
         return this;
     }
 
-    public StringSchema minLength(int minLength) {
-        if (minLength < 0) {
+    public StringSchema minLength(int length) {
+        if (length < 0) {
             throw new IllegalArgumentException("Minimum length cannot be negative");
         }
-        this.minLength = minLength;
+        this.minLength = length;
         return this;
     }
 
